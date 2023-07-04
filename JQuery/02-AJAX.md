@@ -42,4 +42,4 @@ $.ajax({
 })
 ```
 
-原生==>  [10-原生AJAX.md](..\JavaScript\10-原生AJAX.md) 
+原生==>  [12-原生AJAX](../JavaScript/12-原生AJAX)
