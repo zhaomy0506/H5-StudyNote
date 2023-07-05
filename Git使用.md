@@ -24,26 +24,42 @@ ssh-keygen -t rsa -C "邮箱地址"
 
 将配置好的密匙添加到github/gite上
 
+## 使用Git
 
-## 项目初始化
+git status
+
+- 查看当前仓库状态(重要)
+
+git init
+
+- 初始化仓库
+
+### 文件状态
+
+在git中文件分为四种状态: 未跟踪 -> 暂存 -> 未修改 -> 修改
+
+刚添加到文件夹中的文件处于未跟踪状态:
+
+1. 未跟踪 -> 暂存(提交到暂存区)
+   - `git add <filename>` 将文件切换到暂存状态
+   - `git add *`将所有已修改(为跟踪)的文件暂存
+
+2. 暂存 -> 未修改(提交到本地仓库)
+   - `git commit -m "xxx"`提交到本地仓库 -m 的意思为message
+   - `git commit -a -m "xxx"` 提交所有已修改的文件(未跟踪的文件不会提交)
+
+3. 未修改 -> 修改
+
+   - 修改文件后,文件自动变成修改状态
+
+   - `git log` 查看日志
 
 > 流程:本地文件夹 -> 变成工作区 -> 上传暂存区 -> 上传本地仓库
 
-1. `git init` 初始化工作区 
+## 上传到远程仓库
 
-   `git status` 查看工作区状态 
-2. `git add .` 上传暂存区 
-3. `git commit -m "描述"` 上传本地仓库 
-
-   忘记写 -m  可使用:`wq+Enter`  退出
-4. `git remote add orgin 远程仓库地址` 链接远程仓库 
-5. `git push -u origin master` 推送到远程仓库 
-
- ```
-  git checkout 文件名称 检出暂存区文件
-  git log 查看上传日志
-  git reset --hard"hash值" 回溯版本
- ```
+1. `git remote add orgin 远程仓库地址` 链接远程仓库 
+2. `git push -u origin master` 推送到远程仓库 
 
 ## 基本操作
 
