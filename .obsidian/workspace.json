@@ -11,8 +11,12 @@
             "id": "16e901b54f6cd701",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/05-对象.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -61,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "JavaScript/05-对象.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "JavaScript/05-对象.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "JavaScript/05-对象.md"
+              }
             }
           },
           {
@@ -149,9 +158,10 @@
   "active": "16e901b54f6cd701",
   "lastOpenFiles": [
     "JavaScript/06-函数.md",
-    "JavaScript/05-对象.md",
     "JavaScript/03-运算符.md",
+    "JavaScript/05-对象.md",
     "JavaScript/04-流程控制语句.md",
+    "JavaScript/16-数据结构.md",
     "JavaScript/13-概念.md",
     "JavaScript/07-数组.md",
     "JavaScript/02-数据类型.md",
