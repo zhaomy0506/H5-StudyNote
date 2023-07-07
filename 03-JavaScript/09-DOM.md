@@ -103,8 +103,8 @@
 | -------------------------------------- | ---------------------------------------------------------- |
 | `el.style.样式名`                      | 获取/修改元素的行内样式                                    |
 | `getComputedStyle(el,[伪元素]).样式名` | 获取元素的计算样式                                         |
-| `el.clientHeight`<br>`el.clientWidth`  | 获取元素内部的高度/宽度，padding和margin                   |
-| `el.offsetHeight`<br>`el.offsetWidth`  | 获取元素的整体高度/宽度，border、padding和margin           |
+| `el.clientHeight`<br>`el.clientWidth`  | 获取元素内部的高度/宽度，padding和content                  |
+| `el.offsetHeight`<br>`el.offsetWidth`  | 获取元素的整体高度/宽度，border、padding和content          |
 | `el.scrollHeight`<br>`el.scrollWidth`  | 获取元素的滚动高度/宽度，整个元素的高度和溢出区域          |
 | `el.offsetParent`                      | 获取元素的定位父元素，返回距离最近开启定位的祖先元素或body |
 | `el.offsetTop`<br>`el.offsetLeft`      | 获取元素相对于其定位父元素的垂直偏移量和水平偏移量         |
@@ -224,3 +224,12 @@ screenX/screenY 视口坐标系
 
 
 
+1. offsetWidth、offsetHeight 获取元素宽和高（padding + border + content）
+
+​	只读属性，返回整数（无单位）
+
+2. offsetparent：返回距离该元素最近的定位元素
+
+​	绝对定位参照物一致
+
+3. offsetLeft、offsetTop 获取距离最近定位元素的边框距离
