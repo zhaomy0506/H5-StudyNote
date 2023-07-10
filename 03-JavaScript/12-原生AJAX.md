@@ -130,11 +130,11 @@
 
 4. `.responseType = 'json'` 服务器返回的是json字符串,会被自动转换成json对象
 
-5. .setRequestHeader()设置请求头类型
+5. `.setRequestHeader()`设置请求头类型
 
-6. .send()发送Ajax请求
+6. `.send()`发送Ajax请求
 
-7. .abort()取消请求
+7. `.abort()`取消请求
 
 
 
