@@ -15,5 +15,9 @@ Obsidian插件+主题
 - [ ] Vue3
 - [ ] ...
 
+## js易混淆点
 
+DOM对象，client、offset
+
+Array各种方法：非破坏性方法，破坏性方法
 
