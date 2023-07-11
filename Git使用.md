@@ -127,22 +127,30 @@ git rebase <branch name># 将当前分支变基到指定分支
 
 rebase 和 merge 对于合并分支来说,最终结果是一样的!但是变基(rebase)会使代码提交记录更加整洁和清晰
 
-## 上传到远程仓库
-
-1. `git remote add orgin 远程仓库地址` 链接远程仓库 
-2. `git push -u origin master` 推送到远程仓库 
 
 
+## 远程仓库(remote)
 
-**遇到问题**:
+将本地库上传到远程仓库:
 
-  ```
-1. 本地文件与仓库内容冲突时
-	- 执行 git pull origin master
-	- 修改冲突后
-	- git push
-2. 为了避免冲突,每天git pull
-3. 空文件夹,上传会报错
-4. 不能直接在仓库删除,删除过后本地仓库跟远程仓库会有冲突,可以把远程仓库的最新代码(git pull)在本地删除,再上传到远程仓库
-5. 对文件增删改,都需要上传
-  ```
+```bash
+git remote add <remote name> <url> # 链接本地库 名字-地址
+git push -u <remote name> <branch name> # 上传指定分支 到 指定库
+```
+
+远程库常用操作命令:
+
+```bash
+git remote # 列出当前关联的远程库
+git remote <远程库名> <url> # 关联远程库
+git remote remove <远程库名> # 删除远程库
+git push -u <远程库名> <分支名> # 推送本地分支到远程库,并关联分支
+
+# 本地库如果版本低于远程库,push默认推送不上去
+# 要想推送成功,必须保证本地库和远程库的版本一致
+git fetch # fetch会从远程仓库下载所有代码,使用fetch拉取,必须要进行合并
+# 使用git merge 远程库名/分支名 进行合并
+
+git pull # 拉取最新版本
+```
+

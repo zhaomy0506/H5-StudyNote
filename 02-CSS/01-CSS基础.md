@@ -147,6 +147,8 @@
 
 ​	`:focus` 获取焦点的元素
 
+​	`:fullscreen` 元素全屏状态 [js中全屏控制](../03-JavaScript/09-DOM.md#6.补充内容) 
+
 tips: 表单类元素才能使用 `:focus` 伪类。
 
 > 速记 : 遵循 `LVHA` 的顺序，即： `link` 、 `visited` 、 `hover` 、 `active` 

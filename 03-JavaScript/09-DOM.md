@@ -97,18 +97,22 @@
 - 只会复制当前节点,并不会复制子节点
 - 传入参数代表是否复制子节点
 
-# 3.CSS样式读取
+# 3.CSS样式读取/修改
 
-| 方法                                   | 描述                                                       |
-| -------------------------------------- | ---------------------------------------------------------- |
-| `el.style.样式名`                      | 获取/修改元素的行内样式                                    |
-| `getComputedStyle(el,[伪元素]).样式名` | 获取元素的计算样式                                         |
-| `el.clientHeight`<br>`el.clientWidth`  | 获取元素内部的高度/宽度，padding和content，不包含溢出部分  |
-| `el.offsetHeight`<br>`el.offsetWidth`  | 获取元素的整体高度/宽度，border、padding和content          |
-| `el.scrollHeight`<br>`el.scrollWidth`  | 获取元素内容的高度/宽度，整个元素的高度和溢出区域          |
-| `el.offsetParent`                      | 获取元素的定位父元素，返回距离最近开启定位的祖先元素或body |
-| `el.offsetTop`<br>`el.offsetLeft`      | 获取元素相对于其定位父元素的垂直偏移量和水平偏移量         |
-| `el.scrollTop`<br>`el.scrollLeft`      | 获取/修改元素的垂直/水平滚动条滚动距离                     |
+| 方法                                   | 描述                                                         |
+| -------------------------------------- | ------------------------------------------------------------ |
+| `el.style.样式名`                      | 获取/修改元素的行内样式                                      |
+| `getComputedStyle(el,[伪元素]).样式名` | 获取元素的计算样式                                           |
+| el.style.serProperty('样式名','值)     | 设置样式的值(可获取[css变量](../02-CSS/07-补充内容.md#2.css变量)) |
+| el.getPropertyValue('样式名')          | 获取对应实行的值                                             |
+
+获取元素行内样式设置的的 CSS 变量
+
+`element.style.getPropertyValue("--my-var");`
+
+获取元素内联/外联样式设置的的 CSS 变量
+
+`getComputedStyle(element).getPropertyValue("--my-var");`
 
 ## 读取/修改class类名
 
@@ -149,7 +153,40 @@
 1. `el.scrollTop/Left` 获取/修改元素的垂直/水平滚动条滚动距离
 2. `el.scrollWidth/Height` 获取元素实际高度,包含溢出部分+上左padding
 
-css样式：`html { scroll-behavior: smooth; }` 平滑过渡
+### 浏览器窗口相关：
+
+1. 获取浏览器视口大小
+
+```javascript
+document.documentElement.clientWidth/Height
+window.innerWidth/Height 
+```
+
+2. 获取元素距离视口的位置`el.getBoundingClientRect()` 
+
+   返回一个对象:
+
+   1. width/heigth = 元素本身 padding + width/height
+   2. top(y)/bottom 元素上下边框,距离视口顶部距离
+   3. left(x)/right 元素左右边框,距离视口左侧距离
+
+![element-box-diagram.png (1466×1099) (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect/element-box-diagram.png)
+
+3. 滚动条平滑过渡:
+
+```css
+html { 
+    scroll-behavior: smooth; 
+}/*css样式*/
+```
+
+```js
+window.scroll({
+    left,
+    top，
+    behavior: "smooth"
+})//使用js属性
+```
 
 # 5. 事件
 
@@ -233,3 +270,30 @@ ul.addEventListener('click',(e)=>{
 3.  需要再捕获阶段触发事件，可以将`addEventListener`，第三个参数传`true`
 
 4. 可以使用`e.eventPhase`查看事件触发阶段
+
+# 6.补充内容
+
+1. 元素内容是否可编辑
+
+```js
+document.designMode = 'on'
+```
+
+```css
+.box{
+    contentEditable:true
+}
+```
+
+2. 元素全屏展示
+
+   1. `document.fullscreen` 该属性存储全屏状态
+
+   2. `document.exitFullscreen()` 退出全屏
+
+   3. `el.requestFullscreen()` 该方法可以使元素全屏展示
+
+   4.  [css全屏状态选择器](../02-CSS/01-CSS基础.md#伪类选择器) 
+   
+   > 注意:获取全屏状态和退出全屏时,应使用`document`来获取对应状态
+
