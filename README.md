@@ -19,5 +19,4 @@ Obsidian插件+主题
 
 DOM对象，client、offset
 
-Array各种方法：非破坏性方法，破坏性方法
-
+Array各种方法：非破坏性方法,破坏性方法,查询(includes、)
