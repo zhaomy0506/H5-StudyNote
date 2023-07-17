@@ -1,4 +1,4 @@
-# AJAX
+# AJAX(异步的JS和XML)
 
 > AJAX是浏览器提供的一些方法,用来与服务器通信的技术
 
@@ -136,8 +136,19 @@
 
 7. `.abort()`取消请求
 
-
-
-# 超时设定
+## 超时设定
 
 .timeOut = 时间(ms) 超时未响应,就取消请求
+
+
+
+
+
+# fetch
+
+fetch 也是发送异步请求的工具(Promise版的AJAX)
+
+fetch('url')
+
+fetch会直接返回一个promise 结果
+
