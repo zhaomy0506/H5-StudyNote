@@ -74,3 +74,10 @@ const app = new Vue({
    2. 函数式
 
 > 由Vue管理的函数,一定不要写箭头函数,因为其this不指向自身实例
+
+## Vue的配置项
+
+1. el 绑定的容器
+2. data 存储的数据
+3. methods 存储的方法
+4. computed 计算属性
