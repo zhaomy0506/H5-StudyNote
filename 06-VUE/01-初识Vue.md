@@ -81,3 +81,5 @@ const app = new Vue({
 2. data 存储的数据
 3. methods 存储的方法
 4. computed 计算属性
+5. watch 侦听属性
+6. filters [过滤器](./05-过滤器.md#过滤器)
