@@ -9,14 +9,23 @@ Obsidian插件+主题
 - [x] CSS
 - [x] JavaScript基础
 - [x] 了解Jquery+Nodejs
-- [ ] JavaScript进阶
+- [x] JavaScript进阶
 - [ ] Vue2
 - [ ] 移动端布局
+- [ ] 中后台学习
 - [ ] Vue3
 - [ ] ...
 
-## js易混淆点
+# 本地开发环境备份
 
-DOM对象，client、offset
+```
+Node v18.16.1
+|-npm包
+  |-pm2 @5.3.0 后台进程守护
+  |-nodemon @3.0.1 自动刷新工具
+  |-@vue/cli @5.0.8 vue脚手架
+  |-@volar-plugins/vetur @2.0.0 volar中使用vetur
+```
 
-Array各种方法：非破坏性方法,破坏性方法,查询(includes、)
+
+
