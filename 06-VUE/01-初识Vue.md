@@ -17,7 +17,7 @@
 1. data中所有的属性,最后都出现在vm身上
 2. vm身上所有的属性及Vue原型上所有的属性,在Vue模版中都可以直接使用
 
-![MVVM](../.img/MVVM.png)
+![MVVM](../img/MVVM.png)
 
 ## 初识Vue
 
@@ -79,9 +79,12 @@ const app = new Vue({
 
 ## Vue的配置项
 
-1. el 绑定的容器
-2. data 存储的数据
-3. methods [存储的方法](./02-模版与指令语法.md#2.事件绑定)
-4. computed [计算属性](./03-计算属性与监视.md#计算属性computed)
-5. watch [侦听属性](./03-计算属性与监视.md#监视属性watch)
-6. filters [过滤器](./05-过滤器.md#过滤器)
+1. template 模版内容
+2. el 绑定的容器
+3. data 存储的数据
+4. methods [存储的方法](./02-模版与指令语法.md#2.事件绑定)
+5. computed [计算属性](./03-计算属性与监视.md#计算属性computed)
+6. watch [侦听属性](./03-计算属性与监视.md#监视属性watch)
+7. props 接收传入数据
+8. filters [过滤器](./05-过滤器.md#过滤器)
+9. directives [自定义属性](./02-模版与指令语法.md#三、自定义指令)
