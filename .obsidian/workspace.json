@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04-JQuery/02-AJAX.md",
-                "mode": "preview",
+                "file": "03-JavaScript/05-对象.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04-JQuery/02-AJAX.md",
+                "file": "03-JavaScript/05-对象.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04-JQuery/02-AJAX.md",
+                "file": "03-JavaScript/05-对象.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04-JQuery/02-AJAX.md"
+                "file": "03-JavaScript/05-对象.md"
               }
             }
           },
@@ -154,11 +154,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0afdcf82dcec6cd8",
+  "active": "85f3dd8bbe879b26",
   "lastOpenFiles": [
-    "03-JavaScript/12-原生AJAX.md",
     "06-VUE/面试题.md",
     "06-VUE/01-初识Vue.md",
+    "06-VUE/03-newVue配置项.md",
+    "06-VUE/04-样式绑定与元素获取.md",
+    "04-JQuery/02-AJAX.md",
+    "03-JavaScript/12-原生AJAX.md",
     "未命名.canvas",
     "未命名 1.canvas",
     "06-VUE/06-生命周期.md",
@@ -176,14 +179,11 @@
     "03-JavaScript/13-正则表达式.md",
     "03-JavaScript/16-数据结构.md",
     "03-JavaScript/15-算法.md",
-    "04-JQuery/02-AJAX.md",
     "02-CSS/08-奇技淫巧.md",
     "JavaScript/06-函数.md",
     "JavaScript/03-运算符.md",
     "JavaScript/05-对象.md",
     "JavaScript/04-流程控制语句.md",
-    "JavaScript/16-数据结构.md",
-    "JavaScript/13-概念.md",
     "03-JavaScript"
   ]
 }

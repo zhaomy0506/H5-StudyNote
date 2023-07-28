@@ -82,9 +82,9 @@ const app = new Vue({
 1. template 模版内容
 2. el 绑定的容器
 3. data 存储的数据
-4. methods [存储的方法](./02-模版与指令语法.md#2.事件绑定)
-5. computed [计算属性](./03-计算属性与监视.md#计算属性computed)
-6. watch [侦听属性](./03-计算属性与监视.md#监视属性watch)
+4. methods [存储的方法](./02-模版语法.md#2.事件绑定)
+5. computed [计算属性](./03-newVue配置项.md#5.`computed`)
+6. watch [侦听属性](./03-newVue配置项.md#6.`watch`)
 7. props 接收传入数据
-8. filters [过滤器](./05-过滤器.md#过滤器)
-9. directives [自定义属性](./02-模版与指令语法.md#三、自定义指令)
+8. filters [过滤器](./03-newVue配置项.md#7.`filters`)
+9. directives [自定义属性](./02-模版语法.md#三、自定义指令)
