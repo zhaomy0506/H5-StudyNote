@@ -17,7 +17,7 @@
 1. data中所有的属性,最后都出现在vm身上
 2. vm身上所有的属性及Vue原型上所有的属性,在Vue模版中都可以直接使用
 
-![MVVM](../img/MVVM.png)
+<img src="../img/MVVM.png" alt="MVVM" style="zoom: 67%;" />
 
 ## 初识Vue
 
