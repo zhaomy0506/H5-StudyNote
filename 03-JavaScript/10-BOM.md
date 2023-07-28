@@ -1,4 +1,4 @@
-## BOM对象
+# BOM对象
 
 BOM对象是(Browser)浏览器对象模型
 
@@ -75,27 +75,19 @@ window.open(网址,strWindowName,[StrWindowFeatures])
 
 控制台再打印引用值是,弱国点击箭头展开时,看到的是对象的最新情况,(并不是当时的情况)
 
-# web存储
+## webStorage本地存储
 
-`localStorage`
+1. 本地存储内容大小一般支持5MB左右
+2. 浏览器通过window.sessionStorage和window.localStorage属性来实现本地存储机制
+3. 相关API
+   1. `xxxxxStorage.setItem('key',value)`添加指定数据并指定名称
+   2. `xxxxxStorage.getItem('key')`获取指定数据
+   3. `xxxxxStorage.removeItem('key')`移除指定数据
+   4. `xxxxxStorage.clear()`清除所有数据
 
-​	除非用户人为清楚,否则存储数据被长期保存
-
-​	同源使用的是同一个localStorage对象
-
-`.setItem('键名','键值')`存储数据
-
-`.getItem('键名')`获取对应数据
-
-`.removeItem('键名')`删除对用数据
-
-sessionStorage
-
-​	每一个网页都有一个独立的sessionStorage
-
-相同点:都能存储数据
-
-不同点:生命周期不同
+>1. sessionStorage储存的内容会随着浏览器窗口关闭而消失
+>2. LocalStorage储存的内容,需要手动清除
+>3. 如果获取的内容不存在,会返回null值
 
 
 

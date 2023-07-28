@@ -226,3 +226,34 @@ props:{
 >***props是只读的,如需修改,请复制一份在data上使用***
 >
 >***该配置项会优先于data配置项放置VueComponent实例对象上***
+
+## 9.`Mixin`
+
+> Vue3中尽量少用mixin
+
+功能:可以把多个组件共用的配置提取成一个混入对象,实现复用
+
+使用:
+
+编辑混入对象,需向外暴露
+
+```js
+export default{
+    data(){...some code},
+    methods:{...some code}
+    mouted(){...somecode}
+    ...
+}
+```
+
+```js
+//全局混入
+Vue.mixin(xxx)
+//局部混入
+mixins:['xxx','xxx']
+//随后使用即可
+```
+
+>VueComponent实例对象身上,优先存储自身存在的数据,当冲突时,保留自身的
+>
+>mixin中的钩子会在组件自身的钩子之前被调用,共存
