@@ -21,6 +21,23 @@
 
 ## 初识Vue
 
+```
+├── node-modules 文件夹: 项目依赖
+├── public 文件夹: 静态资源(图片),注意:public文件夹中的资源,会被原封不动的打包
+│	├── favicon.ico: 页签图标
+│	└── index.html: 主页面
+├──  src 文件夹: 源代码文件夹
+│	├── assets 文件夹: 静态资源(多个组件共用的资源),注意:打包时,会当做模块打包如js文件里
+│	├── components 文件夹: 非路由组件
+│	├── app.vue 根组件
+│	└── main.js 入口文件
+├── .gitgnore git忽略文件
+├── bebel.config.js 配置文件(babel相关)
+├── package.json 应用包配置文件
+├── package.lock.json 包版本控制文件
+├── README.md: 应用描述文件
+```
+
 > *[Vue下载链接](https://v2.cn.vuejs.org/v2/guide/installation.html),引入Vue的Js文件后，就可以使用全局的Vue构造函数来创建Vue实例。*
 
 1. 需要`Vue`工作,必须创建一个`Vue`实例,并传入一个配置对象,
