@@ -1,22 +1,16 @@
-# new Vue(options)配置项
+# new Vue(option)
 
-## 1.`template`
+## `template`模版
 
 功能: 指定需要渲染的HTML结构 
 
 注意: `template`中的内容会替换el指定的容器中的所有内容
 
-### 代码示例
 
-```js
-new Vue({
-    template:`
-    	<h1>你好</h1>
-    `
-})
-```
 
-## 2.`el`
+
+
+## `el`绑定元素
 
 功能: 指定页面中已存在的DOM元素作为Vue实例的挂载目标 
 
@@ -27,7 +21,7 @@ new Vue({
 1. 创建Vue实例的时候配置el属性
 2. 先创建Vue实例,随后通过`vm.$mount('#root')`指定el值
 
-### 代码示例
+代码示例
 
 ```js
 //方式一
@@ -36,7 +30,11 @@ new Vue({el:'.app'})
 new Vue({...some code}).$mount('.app')
 ```
 
-## 3.`data`
+
+
+
+
+## `data`数据
 
 功能: 存储组件中用到的数据 
 
@@ -58,17 +56,23 @@ new Vue({
 })
 ```
 
-## 4.`methods`
+
+
+
+
+## `methods`方法
 
 功能: 存储组件中用到的方法,通常是事件回调函数 
 
-使用: 通过this.yyy调用方法 
+使用: 通过`this.yyy`调用方法 
 
-注意: methods中的方法不要与data中的属性重名
+注意: `methods`中的方法不要与`data`中的属性重名
 
 
 
-## 5.`computed`
+
+
+## `computed`计算属性
 
 计算属性: `computed`配置项,该配置项为一个对象
 
@@ -85,34 +89,13 @@ new Vue({
 1. 计算属性会出现在vm上,直接读取使用即可,**不是函数!**
 2. 计算属性被修改,必须写setter去响应修改,且setter中要引起依赖的数据发生变化
 
-计算属性的两种写法:
-
-```js
-//正常写法
-computed: {
-    fullName: {
-        get() {
-            return this.firstName + '-' + this.lastName
-        },
-        set(value) {
-            console.log(value);
-        }
-    }
-}
-//简写形式
-//只考虑读取,不考虑修改,可以把属性直接写成一个函数,无需配置单独配置getter
-computed: {
-	fullName() {
-		return this.firstName + '-' + this.lastName
-	}
-}
-```
 
 
 
-## 6.`watch`
 
-[Vue监视数据原理](./面试题.md#2.Vue中监视数据的原理)
+## `watch`监视
+
+[Vue监视数据原理](./01-Vue面试题.md#Vue中监视数据的原理)
 
 1. 当被监视的属性发生变化时,回调函数自动调用
 2. 监视的属性必须存在,才能进行监视!
@@ -154,7 +137,7 @@ watch: {
 }
 ```
 
-### 6.1 `computed` 和 `watch` 区别
+### `computed` 和 `watch` 区别
 
 `computed`可以完成的,`watch`都可以完成
 
@@ -167,25 +150,7 @@ watch: {
 
 
 
-## 7.`filters`
-
-> 定义:对于要显示的数据进行特定格式化后在显示***(适用于一些简单逻辑的处理)***
-
-功能: 对要显示的数据进行特定格式化后再显示 
-
-语法:
-
-1. 注册过滤器:`Vue.filter(name,callback)`或者`new Vue({fileters:{}})`
-2. 使用过滤器:`{{xxx | 过滤器名}}`或者`v-bind:属性="xxx | 过滤器名"`
-
-注意:
-
-1. 过滤器也可以接收额外的参数,多个过滤器也可串联使用
-2. 并没有改变原值,是产生新的对应数据
-
-
-
-## 8.`props`
+## `props`
 
 功能: 让组件***接收***外部传入的数据
 
@@ -227,33 +192,3 @@ props:{
 >
 >***该配置项会优先于data配置项放置VueComponent实例对象上***
 
-## 9.`Mixin`
-
-> Vue3中尽量少用mixin
-
-功能:可以把多个组件共用的配置提取成一个混入对象,实现复用
-
-使用:
-
-编辑混入对象,需向外暴露
-
-```js
-export default{
-    data(){...some code},
-    methods:{...some code}
-    mouted(){...somecode}
-    ...
-}
-```
-
-```js
-//全局混入
-Vue.mixin(xxx)
-//局部混入
-mixins:['xxx','xxx']
-//随后使用即可
-```
-
->VueComponent实例对象身上,优先存储自身存在的数据,当冲突时,保留自身的
->
->mixin中的钩子会在组件自身的钩子之前被调用,共存
