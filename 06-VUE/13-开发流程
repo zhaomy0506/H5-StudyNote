@@ -1,0 +1,57 @@
+# 项目开发
+
+## 配置脚手架
+
+在package.json文件中
+
+```json
+"scripts": {
+    "serve": "vue-cli-service serve --open", //此处添加--open,项目运行自动打开浏览器
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+```
+
+## 配置路由表
+
+分类非路由组件/布局组件/路由组件
+
+## 请求封装
+
+1. 封装axios,并导出相关实例
+
+```js
+//封装axios
+
+//导入axios
+import axios from "axios"
+
+const http = axios.create({
+    baseURL:'http://127.0.0.1:3000',
+    timeout: 30000
+})
+
+//请求拦截器 - 修改请求 的 部分内容
+http.interceptors.request.use((config)=>{
+    if(config.method.toUpperCase()=="GET"){
+        //修改请求为GET时,传入data参数,转换为params参数
+        config.params = config.data
+    }
+    return config
+})
+
+export default http
+```
+
+2. 另起文件编写请求api,并导出
+
+3. 在api/index.js文件下,导入所有请求并导出(派发)
+
+## 屏蔽防盗链
+
+在index.html文件中
+
+```html
+<meta name='referrer' content='never'>
+```
+

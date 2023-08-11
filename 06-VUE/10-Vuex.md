@@ -49,6 +49,17 @@ export defalut new Vuex.store({
 
 > 若没有网络请求或其他业务逻辑,组件中可以跳过dispatch,直接进行commit
 
+## 关键属性
+
+| 属性       | 描述                   |
+| ---------- | ---------------------- |
+| state      | 全局的数据中           |
+| getters    | 全局的计算属性         |
+| actions    | 处理数据并提交         |
+| mutations  | 修改全局数据的方法集合 |
+| modules    | 将全局数据分模块       |
+| namespaced | 将模块内容独立         |
+
 ## getter配置项
 
 用于加工state中的数据,类似于`computed`

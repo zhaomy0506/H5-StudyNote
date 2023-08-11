@@ -129,7 +129,7 @@
 
 元素偏移量offset,相关属性可以获取该元素的位置(偏移),大小等
 
-![0bb57cc0df944daba41f7c7e0984ba53~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp (400×293) (byteimg.com)](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0bb57cc0df944daba41f7c7e0984ba53~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp)
+![](../img/offset.awebp)
 
 1. `el.offsetParent` 获取元素带有定位的父元素
 2. `el.offsetTop/Left` 获取元素相对定位元素的垂直/水平偏移量(距离)
@@ -139,7 +139,7 @@
 
 元素可视区client系列,通过相关元素可以获取该元素的边框大小,元素大小等
 
-![918cd8df96fb4d5daf32277dc4b11154~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp (401×293) (byteimg.com)](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/918cd8df96fb4d5daf32277dc4b11154~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp)
+![](../img/client.awebp)
 
 1. `el.clientTop/Left` 获取元素的上/左边框宽度
 2. `el.clientHeight/width` 获取该元素padding+content的宽度/高度,不含边框
@@ -148,7 +148,7 @@
 
 元素滚动scroll系列,相关属性可以获取/修改滚动距离,元素大小
 
-![bb0eb9f5c5774f2995f84d8d1a50c790~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp (426×439) (byteimg.com)](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bb0eb9f5c5774f2995f84d8d1a50c790~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp)
+![](../img/scroll.awebp)
 
 1. `el.scrollTop/Left` 获取/修改元素的垂直/水平滚动条滚动距离
 2. `el.scrollWidth/Height` 获取元素实际高度,包含溢出部分+上左padding
@@ -170,7 +170,7 @@ window.innerWidth/Height
    2. top(y)/bottom 元素上下边框,距离视口顶部距离
    3. left(x)/right 元素左右边框,距离视口左侧距离
 
-![element-box-diagram.png (1466×1099) (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect/element-box-diagram.png)
+<img src="../img/ViewProt.png" style="zoom:50%;" />
 
 3. 滚动条平滑过渡:
 
@@ -187,6 +187,15 @@ window.scroll({
     behavior: "smooth"
 })//使用js属性
 ```
+
+4. 获取浏览器滚动距离
+
+```js
+// 滚动条滚动距离
+let sct = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
+```
+
+
 
 # 5. 事件
 
