@@ -10,7 +10,7 @@ Obsidian插件+主题
 - [x] JavaScript基础
 - [x] 了解Jquery+Nodejs
 - [x] JavaScript进阶
-- [ ] Vue2
+- [x] Vue2
 - [ ] 移动端布局
 - [ ] 中后台学习
 - [ ] Vue3
@@ -34,8 +34,6 @@ Node v18.16.1
 ```
 
 
-
-flex 布局
 
 webpack 系统学习
 
