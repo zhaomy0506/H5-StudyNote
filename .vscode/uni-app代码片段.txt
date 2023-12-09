@@ -1,0 +1,18 @@
+## vscode 使用 uniapp
+
+1. 若是通过使用hbuilderx创建的项目(使用cli创建忽略)
+
+   需要安装`@types/uni-app`  `@types/html5plus`
+
+```bash
+npm i @types/uni-app @types/html5plus -D
+```
+
+
+
+2. 使用npm安装`@dcloudio/uni-helper-json`
+
+```bash
+npm i @dcloudio/uni-helper-json
+```
+
