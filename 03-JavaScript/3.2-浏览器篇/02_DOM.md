@@ -329,7 +329,7 @@ alert("Full document height, with scrolled out part: " + scrollHeight);
 - `top/bottom` —— 顶部/底部矩形边缘的 Y 坐标，
 - `left/right` —— 左/右矩形边缘的 X 坐标。
 
-<img src="C:/Users/zhaom/Desktop/H5-StudyNote/.image/getBoundingClientRect图解.png" alt="image-20231215182014157" style="zoom:80%;" />
+<img src="../../.image/getBoundingClientRect图解.png" alt="image-20231215182014157" style="zoom:80%;" />
 
 1. 相对于窗口的坐标 —— `elem.getBoundingClientRect()`。
 2. 相对于文档的坐标 —— `elem.getBoundingClientRect()` 加上当前页面滚动(pageXOffset)。
