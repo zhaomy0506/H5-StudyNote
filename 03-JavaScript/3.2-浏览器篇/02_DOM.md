@@ -9,19 +9,19 @@
 3. 文本节点 —— 包含文本。
 4. 注释 —— 有时我们可以将一些信息放入其中，它不会显示，但 JS 可以从 DOM 中读取它。
 
-# 操作DOM
+# 操作 DOM
 
-DOM 让我们可以对元素和它们中的内容做任何事情，但是首先需要获取到DOM对象。
+DOM 让我们可以对元素和它们中的内容做任何事情，但是首先需要获取到 DOM 对象。
 
 对 DOM 的所有操作都是以 `document` 对象开始，它是 DOM 的主入口
 
 <img src="../../.image/DOM关系图.png" alt="image-20231212180640126" style="zoom:80%;" />
 
-## 顶层DOM元素 
+## 顶层 DOM 元素
 
 最顶层的树节点可以直接作为 `document` 的属性来使用
 
-- **`<html>` = `document.documentElement`** 
+- **`<html>` = `document.documentElement`**
 
   最顶层的 `document` 节点是 `document.documentElement`。这是对应 `<html>` 标签的 DOM 节点
 
@@ -29,7 +29,7 @@ DOM 让我们可以对元素和它们中的内容做任何事情，但是首先�
 
   另一个被广泛使用的 DOM 节点是 `<body>` 元素 —— `document.body`
 
-- **`<head>` = `document.head`** 
+- **`<head>` = `document.head`**
 
   `<head>` 标签可以通过 `document.head` 访问。
 
@@ -52,7 +52,12 @@ DOM 让我们可以对元素和它们中的内容做任何事情，但是首先�
 
 ```html
 <html>
-  <head>...</head><body>...</body>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
 </html>
 ```
 
@@ -72,7 +77,7 @@ DOM 让我们可以对元素和它们中的内容做任何事情，但是首先�
 - `previousElementSibling`，`nextElementSibling` —— 兄弟元素。
 - `parentElement` —— 父元素。
 
-> 在JavaScript的DOM中，`children`，`firstElementChild`，`nextElementSibling` 这些属性被称为 **元素节点属性（元素节点的导航链接）**。
+> 在 JavaScript 的 DOM 中，`children`，`firstElementChild`，`nextElementSibling` 这些属性被称为 **元素节点属性（元素节点的导航链接）**。
 >
 > 这些属性与 `childNodes`，`firstChild`，`nextSibling` 等导航属性的主要区别在于，元素节点属性只返回元素节点，而不返回文本节点和注释节。
 >
@@ -80,7 +85,7 @@ DOM 让我们可以对元素和它们中的内容做任何事情，但是首先�
 >
 > 同样，`children` 返回子元素，而 `childNodes` 返回子节点，包括元素节点、文本节点和注释节点。这些属性都是只读的。
 
-# 搜索DOM
+# 搜索 DOM
 
 | 方法名                   | 搜索方式     | 可以在元素上调用？ | 实时的？ |
 | ------------------------ | ------------ | ------------------ | -------- |
@@ -98,7 +103,7 @@ DOM 让我们可以对元素和它们中的内容做任何事情，但是首先�
 - `elem.matches(css)` 用于检查 `elem` 与给定的 CSS 选择器是否匹配。
 - `elem.closest(css)` 用于查找与给定 CSS 选择器相匹配的最近的祖先。`elem` 本身也会被检查。
 
-# 常用DOM对象属性
+# 常用 DOM 对象属性
 
 每个 DOM 节点都属于一个特定的类。这些类形成层次结构（hierarchy）。完整的属性和方法集是继承的结果。
 
@@ -134,11 +139,11 @@ DOM 让我们可以对元素和它们中的内容做任何事情，但是首先�
 
 DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类。例如，`<input>` 元素（`HTMLInputElement`）支持 `value`，`type`，而 `<a>` 元素（`HTMLAnchorElement`）则支持 `href` 等。大多数标准 HTML 特性（attribute）都具有相应的 DOM 属性。
 
-<img src="..\..\.image\DOM层次结构.png" alt="image-20231213080351825" style="zoom:80%;" />
+<img src="../../.image/DOM层次结构.png" alt="image-20231213080351825" style="zoom:80%;" />
 
 ## 特性和属性
 
-属性(property) 和 特性(attribute)，属性更多的是指DOM对象上的属性，而特性更多的是指HTML标签的属性。
+属性(property) 和 特性(attribute)，属性更多的是指 DOM 对象上的属性，而特性更多的是指 HTML 标签的属性。
 
 - 特性（attribute）—— 写在 HTML 中的内容。
 - 属性（property）—— DOM 对象中的内容。
@@ -158,7 +163,7 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
 - `elem.removeAttribute(name)` —— 移除这个特性。
 - `elem.attributes` —— 所有特性的集合。
 
-# DOM操作
+# DOM 操作
 
 **创建新节点的方法：**
 
@@ -175,7 +180,7 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
 - `node.replaceWith(...nodes or strings)` —— 将 `node` 替换为给定的节点或字符串。
 - `node.remove()` —— 移除 `node`。
 
-<img src="..\..\.image\DOM操作方法.png" alt="image-20231213173508844" style="zoom:80%;" />
+<img src="../../.image/DOM操作方法.png" alt="image-20231213173508844" style="zoom:80%;" />
 
 **通用方法 `elem.insertAdjacentHTML(where,html)`**
 
@@ -186,7 +191,7 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
 3. `"beforeend"` —— 将 `html` 插入到 `elem` 末尾，
 4. `"afterend"` —— 将 `html` 插入到 `elem` 之后。
 
-<img src="..\..\.image\insertAdjacentHTML图解.png" alt="image-20231213174602805" style="zoom:80%;" />
+<img src="../../.image/insertAdjacentHTML图解.png" alt="image-20231213174602805" style="zoom:80%;" />
 
 > 另外，还有类似的方法，`elem.insertAdjacentText` 和 `elem.insertAdjacentElement`，它们会插入文本字符串和元素，但很少使用。
 
@@ -215,7 +220,7 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
 
 # 元素大小和滚动
 
-## Offset系列
+## Offset 系列
 
 `offset`系列 是“最外面”的几何属性，所以我们从这里开始
 
@@ -229,9 +234,9 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
 
 - `offsetLeft/offsetTop` 提供相对于 `offsetParent` 左上角的 x/y 坐标。
 
-- `offsetWidth/Height` 提供元素外部width、height，元素的完整大小
+- `offsetWidth/Height` 提供元素外部 width、height，元素的完整大小
 
-## Client系列
+## Client 系列
 
 `client` 直译过来表示“客户端”的意思，我们可以理解成元素的 content 区域
 
@@ -239,7 +244,7 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
 
 - `clientWidth/clientHeight` —— 内容的 width/height，包括 padding，但不包括滚动条（scrollbar）。
 
-## Scroll系列
+## Scroll 系列
 
 `scroll` 系列是关于滚动条的几何属性
 
@@ -257,8 +262,8 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
 如果这里有一个滚动条，它占用了一些空间，那么这两行代码会显示不同的值：
 
 ```js
-window.innerWidth // 整个窗口的宽度
-document.documentElement.clientWidth // 减去滚动条宽度后的窗口宽度
+window.innerWidth; // 整个窗口的宽度
+document.documentElement.clientWidth; // 减去滚动条宽度后的窗口宽度
 ```
 
 ## 根节点的 width/height
@@ -270,12 +275,15 @@ document.documentElement.clientWidth // 减去滚动条宽度后的窗口宽度
 ```js
 // 为了可靠地获得完整的文档高度，我们应该采用以下这些属性的最大值：
 let scrollHeight = Math.max(
-  document.body.scrollHeight, document.documentElement.scrollHeight,
-  document.body.offsetHeight, document.documentElement.offsetHeight,
-  document.body.clientHeight, document.documentElement.clientHeight
+  document.body.scrollHeight,
+  document.documentElement.scrollHeight,
+  document.body.offsetHeight,
+  document.documentElement.offsetHeight,
+  document.body.clientHeight,
+  document.documentElement.clientHeight
 );
 
-alert('Full document height, with scrolled out part: ' + scrollHeight);
+alert("Full document height, with scrolled out part: " + scrollHeight);
 ```
 
 ## 获取当前滚动
@@ -305,7 +313,7 @@ alert('Full document height, with scrolled out part: ' + scrollHeight);
 
   将它们表示为 `pageX/pageY`
 
-<img src="..\..\.image\pagexy与clientxy图解.png" alt="image-20231215181756325" style="zoom:80%;" />
+<img src="../../.image/pagexy与clientxy图解.png" alt="image-20231215181756325" style="zoom:80%;" />
 
 ## 元素坐标：getBoundingClientRect
 
@@ -321,7 +329,12 @@ alert('Full document height, with scrolled out part: ' + scrollHeight);
 - `top/bottom` —— 顶部/底部矩形边缘的 Y 坐标，
 - `left/right` —— 左/右矩形边缘的 X 坐标。
 
-<img src="C:\Users\zhaom\Desktop\H5-StudyNote\.image\getBoundingClientRect图解.png" alt="image-20231215182014157" style="zoom:80%;" />
+<img src="C:/Users/zhaom/Desktop/H5-StudyNote/.image/getBoundingClientRect图解.png" alt="image-20231215182014157" style="zoom:80%;" />
 
 1. 相对于窗口的坐标 —— `elem.getBoundingClientRect()`。
 2. 相对于文档的坐标 —— `elem.getBoundingClientRect()` 加上当前页面滚动(pageXOffset)。
+
+## elementFromPoint(x, y)
+
+对 `document.elementFromPoint(x, y)` 的调用会返回在窗口坐标 `(x, y)` 处嵌套最多（the most nested）的元素。对于在窗口之外的坐标，`elementFromPoint` 返回 `null`
+
