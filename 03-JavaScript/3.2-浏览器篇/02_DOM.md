@@ -103,6 +103,10 @@ DOM 让我们可以对元素和它们中的内容做任何事情，但是首先�
 - `elem.matches(css)` 用于检查 `elem` 与给定的 CSS 选择器是否匹配。
 - `elem.closest(css)` 用于查找与给定 CSS 选择器相匹配的最近的祖先。`elem` 本身也会被检查。
 
+让我们在这里提一下另一种用来检查子级与父级之间关系的方法，因为它有时很有用：
+
+- 如果 `elemB` 在 `elemA` 内（`elemA` 的后代）或者 `elemA==elemB`，`elemA.contains(elemB)` 将返回 true。
+
 # 常用 DOM 对象属性
 
 每个 DOM 节点都属于一个特定的类。这些类形成层次结构（hierarchy）。完整的属性和方法集是继承的结果。
@@ -208,6 +212,10 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
 
 - `className` —— 字符串值，可以很好地管理整个类的集合。
 - `classList` —— 具有 `add/remove/toggle/contains` 方法的对象，可以很好地支持单个类。
+  - `elem.classList.add/remove(class)` —— 添加/移除类。
+  - `elem.classList.toggle(class)` —— 如果类不存在就添加类，存在就移除它。
+  - `elem.classList.contains(class)` —— 检查给定类，返回 `true/false`。
+
 
 要改变样式：
 
